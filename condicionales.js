@@ -27,3 +27,8 @@ if (edad >=18 && tieneINE){
 } else {
     console.log("no puedes votar");
 }
+
+let a = 10;
+let b = 3;
+let c = a % b;
+console.log(c);
