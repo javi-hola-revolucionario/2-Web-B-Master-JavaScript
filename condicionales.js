@@ -28,7 +28,7 @@ if (edad >=18 && tieneINE){
     console.log("no puedes votar");
 }
 
-let numero = prompt('ingresa un numero:');
+let numero = 5;
 
 numero = parseInt(numero);
 
