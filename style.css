@@ -1,0 +1,33 @@
+#caja {
+    background-color: rgb(13, 200, 113);
+    width: 200px;
+}
+
+.caja {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(38, 75, 75);
+    transition: 0.3s;
+}
+
+.activa {
+    background-color: rgb(87, 17, 153);
+    transform:scale(1.1);
+}
+
+#form {
+    
+}
+
+#contenedor { 
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 1 rem, 2 rem;
+    padding: 1 rem, 2 rem;
+}
+
+#comentario { 
+    width: 250px;
+    height: 50px;
+}

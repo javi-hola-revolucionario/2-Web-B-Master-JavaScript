@@ -3,13 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Introduccion a JS</title>
 </head>
 <body>
+    <header>
+        <h1 id="titulo">Hola mundo</h1>
+        <ul>
+            <li>Home</li>
+            <li>Referencias</li>
+            <li>Blog</li>
+            <li>Contacto</li>
+        </ul>
+    </header>
+    <main>
+        <section>
+            <p class="text">Hola parrafo de texto</p>
+        </section>
+        <section>
+            <p class="text">Hola parrafo de texto segundo</p>
+        </section>
+        <div id="caja">
+            <p class="text">Hola parrafo de texto tercero</p>
+        </div>
 
-    <h1>Experimento de Javascript</h1>
+        
+        <form action="text" id="form">
+            <h3>Comentarios</h3>
+            <div id="contenedor">
+                <input type="text" name="" id="comentario">
+                <button id="btnsubmit">enviar comentario</button>
+            </div>
+        </form>
 
-    
-    <script src="ciclos.js"></script>
+    </main>
+        <button id="btnTexto">cambiar texto</button>
+        <button id="btnColor">cambiar color</button>
+        <button id="btnOcultar">ocultar/mostrar</button>
+        <button id="btnClase">cambiar de clase</button>
+
+    <script src="pruebas.js"></script>
 </body>
 </html>
