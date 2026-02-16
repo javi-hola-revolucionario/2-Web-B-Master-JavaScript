@@ -16,9 +16,22 @@ const libro = {
         this.capitulos.forEach((capitulo, i) =>{
             console.log(`${i +1}. ${capitulo} `);
         })
+    },
+    // Eliminar capitulos
+    eliminarCapitulos(capitulo){
+        this.capitulos.pop(capitulo); 
+            console.log(`Cancion Eliminada: ${capitulo}`);
+    },
+    // agregar capitulos
+    agregarCapitulos(capitulo){
+        this.capitulos.push(capitulo);
+            console.log(`Capitulo Agregado: ${capitulo} `);
     }
-    
+
 }
 
 libro.describirLibro();
+libro.mostrarCapitulos();
+libro.eliminarCapitulos();
+libro.agregarCapitulos('El horizonte');
 libro.mostrarCapitulos();
