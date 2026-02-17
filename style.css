@@ -16,18 +16,29 @@
 }
 
 #form {
-    
+    width: 100%;
+    height:80px;
+    padding: auto;
+    border: #555 dotted;
 }
 
 #contenedor { 
     display: flex;
-    justify-content: flex-start;
+    margin: 20px;
+    border: #555 solid;
+    padding: 10px;
+    flex-basis: auto;
     flex-direction: column;
-    margin: 1 rem, 2 rem;
-    padding: 1 rem, 2 rem;
+}
+
+#contenedor p {
+    border: #c0adad74 dotted 1px;
+    margin: 10px;
 }
 
 #comentario { 
-    width: 250px;
+    border: 1px #555;
+    font-size: 20px;
+    width: 100%;
     height: 50px;
 }

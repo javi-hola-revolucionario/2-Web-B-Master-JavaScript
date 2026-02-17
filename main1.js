@@ -1,9 +1,9 @@
 // Seleccionados nuestros elementos del DOM mediante ID
 
-const titulo =document.getElementById("titulo");
+const titulo = document.getElementById("titulo");
 console.log(titulo);
 
-const texto = document.getElementsByClassName("texto");
+const texto = document.getElementsByClassName("text");
 console.log(texto);
 
 const caja = document.getElementById("caja")
@@ -13,10 +13,6 @@ const btnClase = document.getElementById("btnClase");
 const btnTexto = document.getElementById("btnTexto");
 const btnColor = document.getElementById("btnColor");
 const btnOcultar = document.getElementById("btnOcultar");
-
-const btnSubmit = document.getElementById("btnSubmit");
-
-const form = document.getElementById("form");
 
 // Cambiar de texto
 
@@ -45,9 +41,5 @@ btnClase.addEventListener("click", () => {
     caja.classList.toggle("activa"); // cambia el estado visual
 });
 
-// Funcion del boton
 
-btnSubmit.addEventListener("click", () => {
-    document.body.style.back
-})
 
