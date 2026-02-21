@@ -71,3 +71,27 @@ setTimeout(function () {
 Tiene logica grande
 Necesita ser testeada
 Se necesita claridad*/
+
+
+function mascotas(a,b,c) { 
+    console.log("Nombres de las mascotas: ", a + b + c )
+}
+
+mascotas('Puppy', 'Bombon', 'Milaneso')
+
+console.log("-----------Generar Fibonacci--------");
+
+// Funcion para generar numeros fibonacci
+function fibonacci(n){
+    let serie = [];// Arreglo vacio
+
+    if (n >= 1) serie.push(0);
+    if (n >= 2) serie.push(1);
+
+    for (let i = 2; i < n; i++){ // Empieza desde la posicion 2 porque la 0 y 1 ya existen
+        serie.push(serie[i-1] + serie[i-2]);// suma los dos numeros anteriores y agrega el resultado al arreglo
+    }
+    return serie; // Devuelve la serie
+};
+console.log(fibonacci(5));
+console.log(fibonacci(8));
