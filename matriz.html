@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <h1>MATRIZ DE ACTIVIDADES</h1>
+
+        <!--Panel superior: aqui se captura la nueva actividad-->
+
+        <section class="panel">
+            <label for="taskInput" class="label">Nueva Actividad: </label>
+
+                <div class="top-row">
+                    <input type="text" placeholder="Ej. Pagar recibo" class="input" id="taskInput" >
+
+                    <button id="addBtn" class="btn primary" type="button">
+                        Agregar
+                    </button>
+                </div>
+
+                <div class="bottom-row">
+                    <label for="categorySelect" class="label">Categoria:</label>
+                    <Select id="categorySelect" class="select">
+                        <option value="urgent">Urgentes</option>
+                        <option value="important">Importantes</option>
+                        <option value="later">Para despues</option>
+                        <option value="next">Siguiente semana</option>
+                    </Select>
+                </div>
+
+                <!--Mensaje simple para errores (ej: input vacio)-->
+                <p id="msg" class="msg" aria-live="polite"></p>
+        </section>
+
+
+ <!--Matriz: 4 contenedores (cada uno con su lista)-->
+        <section class="grid">
+
+            <article class="card">
+                <header class="card-header">
+                    <span class="dot red"></span>
+                    <h2>URGENTES</h2>
+                </header>
+                <!-- lISTA donde se insertan tareas urgentes-->
+                 <ul id="list-urgent" class="list"></ul>
+            </article>
+
+            <article class="card">
+                <header class="card-header">
+                    <span class="dot yellow"></span>
+                    <h2>IMPORTANTES</h2>
+                </header>
+                <!-- lISTA donde se insertan tareas urgentes-->
+                 <ul id="list-important" class="list"></ul>
+            </article>
+
+            <article class="card">
+                <header class="card-header">
+                    <span class="dot green"></span>
+                    <h2>PARA DESPUES</h2>
+                </header>
+                <!-- lISTA donde se insertan tareas urgentes-->
+                 <ul id="list-LATER" class="list"></ul>
+            </article>
+
+            <article class="card">
+                <header class="card-header">
+                    <span class="dot blue"></span>
+                    <h2>SIGUIENTE SEMANA</h2>
+                </header>
+                <!-- lISTA donde se insertan tareas urgentes-->
+                 <ul id="list-next" class="list"></ul>
+            </article>
+
+        </section>
+
+    </main>
+
+    <script src="matriz3.js"></script>
+</body>
+</html>
