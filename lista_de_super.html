@@ -8,10 +8,37 @@
 <body>
     <h1>Escribe tus productos del super:</h1>
     
-    <div>
-        <input type="text" id="itemInput" placeholder="Escribe un producto">
-        <button id="addItemButton">Agregar producto</button>
+    <div id="caja">
+    
+        <div>
+            <h2>Actividades urgentes</h2>
+            <input type="text" id="itemInput1" placeholder="Actividad">
+            <button id="addItemButton1">Agregar producto</button>
+            <ul id="itemListUrgentes"></ul>
+        </div>
+        
+        <div>
+            <h2>Actividades importantes</h2>
+            <input type="text" id="itemInput2" placeholder="Actividad">
+            <button id="addItemButton2">Agregar producto</button>
+            <ul id="itemListImportantes"></ul>
+        </div>
+
+        <div>
+            <h2>Actividades para despues</h2>
+            <input type="text" id="itemInput3" placeholder="Actividad">
+            <button id="addItemButton3">Agregar producto</button>
+            <ul id="itemListDespues"></ul>
+        </div>
+
+        <div>
+            <h2>Actividades para la siguiente semana</h2>
+            <input type="text" id="itemInput4" placeholder="Actividad">
+            <button id="addItemButton4">Agregar producto</button>
+            <ul id="itemListSigSemana"></ul>
+        </div>
     </div>
+    
 
     <main>
         <ul id="itemList">
