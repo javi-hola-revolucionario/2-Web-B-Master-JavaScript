@@ -19,5 +19,75 @@ const nextList = document.getElementById("list-next");
 function createTaskItem(text) {
     const li = document.createElement("li");
     li.classList.add("item");
+
+    // Texto seguro (evita innerHTML)
+    const span = document.createElement("span");
+    span.textContent = text;
+
+    // Boton eliminar
+    const delBtn = document.createElement("button");
+    delBtn.type = "button";
+    delBtn.classList.add("btn", "delete");
+    delBtn.textContent = "Eliminar";
+
+    // Evento: eliminar el elemento de la lista
+    delBtn.addEventListener("click", () => {
+        li.remove();
+    });
+
+    li.appendChild(span);
+    li.appendChild(delBtn);
+
+    return li;
 }
+
+function addTask() {
+    // Limpia mensaje anterior
+    msg.textContent = "";
+
+    // Tomamos el texto y quitamos espacios al inicio/fin
+    const text = taskInput.value.trim();
+
+    // Validacion: no permitir tareas vacias
+    if (text === "") {
+        msg.textContent = "Escribe una actividad antes de agregar."
+        taskInput.focus();
+        return;
+    }
+
+    // Obtenemos la categoria elegida
+    const category = categorySelect.value;
+
+    // 3) Elegimos la lista objetivo con IF
+    let targetList;
+
+    if (category === "urgent") {
+        targetList = urgentList;
+    } else if (category === "important") {
+        targetList = importantList;
+    } else if ( category === "later") { 
+        targetList = laterList;
+    } else {
+        // Si no es ninguna de las anteriores, asumimos "next"
+        targetList = nextList;
+    }
+
+    // Creamos el item y lo insertamos en la lista seleccionada
+    const taskItem = createTaskItem(text);
+    targetList.appendChild(taskItem);
+
+    // Limpiamos el input para capturar otra tarea
+    taskInput.value = "";
+    taskInput.focus();
+}
+
+// 4) Evento principal: click en "agregar"
+addBtn.addEventListener("click", addTask);
+
+// 5) Extra: presionar Enter en el input tambien agrega 
+taskInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter"){
+        addTask();
+    }
+});
 
