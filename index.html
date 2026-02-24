@@ -3,37 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Introduccion a JS</title>
+    <title>Querido Diario</title>
 </head>
 <body>
-    <header>
-        <h1 id="titulo">Hola mundo</h1>
-        <ul id="menu">
-            <li>Home</li>
-            <li>Referencias</li>
-            <li>Blog</li>
-            <li>Contacto</li>
-        </ul>
-    </header>
-    <main>
-        <section>
-            <p class="text">Hola parrafo de texto</p>
-        </section>
-        <section>
-            <p class="text">Hola parrafo de texto segundo</p>
-        </section>
-        <div id="caja">
-            <p class="text">Hola parrafo de texto tercero</p>
-        </div>
+    <h1>Querido Diario</h1>
 
-    </main>
-        <button id="btnTexto">cambiar texto</button>
-        <button id="btnColor">cambiar color</button>
-        <button id="btnOcultar">ocultar/mostrar</button>
-        <button id="btnClase">cambiar de clase</button>
-     
+    <p id="fecha"></p> <!--Aqui se mostrara la fecha en que se guardo-->
+    <textarea  id="texto" placeholder="Escribe aqui tus pensamientos..." rows="6" cols="50"></textarea>
 
-    <script src="main1.js"></script>
+    <br>
+
+    <button id="guardar">Guardar</button>
+    <button id="eliminar">Eliminar</button>
+    
+    <!--Conectando nuestro archivo -->
+    <script src="main3.js"></script>
+
 </body>
 </html>
