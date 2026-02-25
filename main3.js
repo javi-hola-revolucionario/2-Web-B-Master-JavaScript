@@ -46,6 +46,14 @@ let txt = document.getElementById("texto");
 let fechaP = document.getElementById('fecha');
 let btnGuardar = document.getElementById('guardar');
 let btnEliminarr = document.getElementById('eliminar');
+const pensamientosList = document.getElementById('pensamientos-list');
+const sinPensamientos = document.getElementById('sin-pensamientos');
+
+// Declarar la clave donde se van a guardar en localStorage
+const CLAVE_PENSAMIENTOS = "diario_pensamientos";
+
+// Variable para controlar si estamos editando
+let editandoId = null;
 
 // Declarar las claves donde se van a guardar en localStorage
 
@@ -58,6 +66,24 @@ function fechaSoloDia () {
     let hoy = new Date(); // Creamos un objeto con la fecha actual
     return hoy.toLocaleDateString('es-MX')
 }
+
+// Funcion para obtener todos los pensamientos del localStorage
+function obtenerPensamientos() {
+    const datos = localStorage.getItem(CLAVE_PENSAMIENTOS);
+    return datos ? JSON.parse(datos) : []; 
+    // Operador ternario: Si datos existe, lo parseamos, si no, devolvemos un array vacio
+}
+
+// Funcion para guardar pensamientos en localStorage
+function guardarEnLocalStorage(pensamientos) {
+    localStorage.setItem(CLAVE_PENSAMIENTOS, JSON.stringify(pensamientos));
+}
+
+// Funcion para generar un ID unico
+function generarID() {
+    return Date.now().toString();
+}
+
 
 function cargar() {
     let textoGuardado = localStorage.getItem(CLAVE_TEXTO)

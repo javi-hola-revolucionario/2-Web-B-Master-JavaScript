@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Querido Diario</title>
+    <link rel="stylesheet" href="diario.css">
 </head>
 <body>
+    <div class="diario-wrapper">
+        <div class="diario-editor">
+
+    
     <h1>Querido Diario</h1>
 
     <p id="fecha"></p> <!--Aqui se mostrara la fecha en que se guardo-->
     <textarea  id="texto" placeholder="Escribe aqui tus pensamientos..." rows="6" cols="50"></textarea>
 
     <br>
-
-    <button id="guardar">Guardar</button>
-    <button id="eliminar">Eliminar</button>
+            <div class="button-container">
+                <button id="guardar">Guardar</button>
+                <button id="eliminar">Eliminar</button>
+            </div>
+    
+            <div class="diario-container">
+                <h2>Mis pensamientos</h2>
+                <div id="pensamientos-list" class="pensamientos-list">
+                    <!--Las tarjetas se generaran aqui con JavaScript-->
+                </div>
+                <div id="sin-pensamientos" class="sin-pensamientos">
+                    <p>No hay pensamientos guardados.</p>
+                </div>
+            </div>    
+    </div>
     
     <!--Conectando nuestro archivo -->
     <script src="main3.js"></script>
