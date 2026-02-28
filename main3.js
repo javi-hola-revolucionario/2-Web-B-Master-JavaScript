@@ -58,7 +58,7 @@ let editandoId = null;
 // Declarar las claves donde se van a guardar en localStorage
 
 const CLAVE_TEXTO = "diario_texto";
-const CLAVE_FECHA = "diario_fecha"
+const CLAVE_FECHA = "diario_fecha";
 
 // Funcion para obtener la fecha del dia de hoy
 
