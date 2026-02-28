@@ -10,7 +10,6 @@ const copyButton = document.getElementById('copy-password');
 const toggleButton = document.getElementById('toggle-password');
 const outputField = document.getElementById('current-password');
 
-// State for password visibility
 let passwordVisible = false;
 let generatedPassword = '';
 
@@ -35,7 +34,7 @@ function GeneradorContraseña() {
         caracteres += simbolos;
     }
 
-    // si no se seleccionó ningún conjunto de caracteres
+    
     if (caracteres === "") {
         return "";
     }
@@ -47,33 +46,32 @@ function GeneradorContraseña() {
     return contraseña;
 }
 
-// actualiza el número mostrado junto al slider
+
 function actualizarLongitud() {
     lengthValue.textContent = cantidadCaracteres.value;
 }
 
-// mostrar/ocultar la contraseña
-function togglePasswordVisibility() {
-    if (generatedPassword === '') {
+function visibilidadContrasena() {
+    if (contrasenaGenerada === '') {
         alert('Primero genera una contraseña');
         return;
     }
     
-    passwordVisible = !passwordVisible;
+    contrasenaVisible = !contrasenaVisible;
     
-    if (passwordVisible) {
-        outputField.textContent = generatedPassword;
+    if (contrasenaVisible) {
+        outputField.textContent = contrasenaGenerada;
         toggleButton.textContent = '🙈'; // ojo cerrado
     } else {
-        outputField.textContent = '•'.repeat(generatedPassword.length); // puntos
+        outputField.textContent = '•'.repeat(contrasenaGenerada.length); // puntos
         toggleButton.textContent = '👁️'; // ojo abierto
     }
 }
 
 cantidadCaracteres.addEventListener('input', actualizarLongitud);
 
-btnGenerar.addEventListener('click', function(event) {
-    event.preventDefault();
+btnGenerar.addEventListener('click', function(evento) {
+    evento.preventDefault();
 
     if (!incluirMayus.checked && !incluirMinus.checked && !incluirNumeros.checked && !incluirSimbolos.checked) {
         alert('Selecciona al menos un tipo de carácter.');
@@ -86,13 +84,13 @@ btnGenerar.addEventListener('click', function(event) {
     toggleButton.textContent = '👁️'; // reset al ojo abierto
 });
 
-toggleButton.addEventListener('click', function(event) {
-    event.preventDefault();
+toggleButton.addEventListener('click', function(evento) {
+    evento.preventDefault();
     togglePasswordVisibility();
 });
 
-copyButton.addEventListener('click', function(event) {
-    event.preventDefault();
+copyButton.addEventListener('click', function(evento) {
+    evento.preventDefault();
     if (generatedPassword === '') {
         alert('Primero genera una contraseña');
         return;
@@ -102,6 +100,5 @@ copyButton.addEventListener('click', function(event) {
         .catch(err => console.error('Error copiando al portapapeles', err));
 });
 
-// initialize the length display when the script loads
 actualizarLongitud();
 
